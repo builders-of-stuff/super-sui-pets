@@ -45,6 +45,7 @@
 		"vite-plugin-devtools-json": "^1.0.0"
 	},
 	"dependencies": {
+		"jimp": "^1.6.0",
 		"phaser": "4.0.0-rc.5"
 	}
 }
