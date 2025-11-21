@@ -7,6 +7,8 @@ export class BattleScene extends Phaser.Scene {
     battleLog: BattleLog | null = null;
     petsA: Phaser.GameObjects.Sprite[] = [];
     petsB: Phaser.GameObjects.Sprite[] = [];
+    textsA: Phaser.GameObjects.Text[] = [];
+    textsB: Phaser.GameObjects.Text[] = [];
     namesA: Phaser.GameObjects.Text[] = [];
     namesB: Phaser.GameObjects.Text[] = [];
     
@@ -69,10 +71,6 @@ export class BattleScene extends Phaser.Scene {
         const spacing = 80;
 
         pets.forEach((pet, i) => {
-            const x = startX + (i * spacing * direction * (side === 'A' ? 1 : -1)); // A goes left, B goes right? No, A is left side facing right.
-            // A: 300, 220, 140...
-            // B: 500, 580, 660...
-            
             const actualX = side === 'A' ? (350 - i * spacing) : (450 + i * spacing);
             const y = 300;
 
